@@ -1,0 +1,207 @@
+{
+  "id": "superpowers-onboarding",
+  "title": "Superpowers Plugin Tour",
+  "description": "Explore the Superpowers development workflow and skills library for coding agents",
+  "version": "1.0.0",
+  "audience": "New Developers",
+  "prerequisites": [
+    "Basic understanding of coding agents and plugin systems"
+  ],
+  "steps": [
+    {
+      "id": "step-1-overview",
+      "title": "Welcome to Superpowers",
+      "description": "Superpowers is a complete software development workflow for coding agents, built on composable skills that trigger automatically to guide development processes.",
+      "estimatedTime": 60,
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-2-skills-library",
+      "title": "Skills Library",
+      "description": "The heart of Superpowers - reusable skills that implement best practices for development workflows.",
+      "estimatedTime": 120,
+      "focusDirectory": "skills",
+      "highlightLayers": [
+        {
+          "id": "core-skills",
+          "name": "Core Skills",
+          "color": "#3b82f6",
+          "items": [
+            {
+              "path": "skills/brainstorming/SKILL.md",
+              "type": "file"
+            },
+            {
+              "path": "skills/writing-plans/SKILL.md",
+              "type": "file"
+            },
+            {
+              "path": "skills/subagent-driven-development/SKILL.md",
+              "type": "file"
+            }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        },
+        {
+          "id": "development-skills",
+          "name": "Development Skills",
+          "color": "#10b981",
+          "items": [
+            {
+              "path": "skills/test-driven-development/SKILL.md",
+              "type": "file"
+            },
+            {
+              "path": "skills/systematic-debugging/SKILL.md",
+              "type": "file"
+            },
+            {
+              "path": "skills/verification-before-completion/SKILL.md",
+              "type": "file"
+            }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        }
+      ],
+      "colorMode": "fileTypes",
+      "interactiveActions": [
+        {
+          "type": "explore",
+          "description": "Explore the skills directory structure"
+        }
+      ]
+    },
+    {
+      "id": "step-3-platform-integration",
+      "title": "Platform Integration",
+      "description": "See how Superpowers integrates with different coding platforms through platform-specific configurations.",
+      "estimatedTime": 90,
+      "highlightLayers": [
+        {
+          "id": "platform-config",
+          "name": "Platform Support",
+          "color": "#f59e0b",
+          "items": [
+            {
+              "path": ".claude-plugin",
+              "type": "directory"
+            },
+            {
+              "path": ".opencode",
+              "type": "directory"
+            },
+            {
+              "path": ".codex",
+              "type": "directory"
+            }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        },
+        {
+          "id": "docs",
+          "name": "Documentation",
+          "color": "#8b5cf6",
+          "items": [
+            {
+              "path": "docs/README.claude-code.md",
+              "type": "file"
+            },
+            {
+              "path": "docs/README.opencode.md",
+              "type": "file"
+            },
+            {
+              "path": "docs/README.codex.md",
+              "type": "file"
+            }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-4-testing",
+      "title": "Test Suite",
+      "description": "Comprehensive test coverage ensures the skills work correctly across different platforms and scenarios.",
+      "estimatedTime": 90,
+      "focusDirectory": "tests",
+      "highlightLayers": [
+        {
+          "id": "test-categories",
+          "name": "Test Categories",
+          "color": "#ef4444",
+          "items": [
+            {
+              "path": "tests/opencode",
+              "type": "directory"
+            },
+            {
+              "path": "tests/claude-code",
+              "type": "directory"
+            },
+            {
+              "path": "tests/explicit-skill-requests",
+              "type": "directory"
+            }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        }
+      ],
+      "colorMode": "fileTypes",
+      "interactiveActions": [
+        {
+          "type": "click-file",
+          "description": "Click to view test scripts",
+          "target": "tests/opencode/run-tests.sh"
+        }
+      ]
+    },
+    {
+      "id": "step-5-commands",
+      "title": "Command Interface",
+      "description": "Slash commands provide direct access to key Superpowers workflows.",
+      "estimatedTime": 60,
+      "focusDirectory": "commands",
+      "highlightFiles": [
+        "commands/brainstorm.md",
+        "commands/write-plan.md",
+        "commands/execute-plan.md"
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-6-next-steps",
+      "title": "Getting Started",
+      "description": "Ready to use Superpowers? Check the README for installation instructions or explore individual skills to understand specific workflows.",
+      "estimatedTime": 60,
+      "highlightFiles": [
+        "README.md",
+        "docs/testing.md"
+      ],
+      "interactiveActions": [
+        {
+          "type": "click-file",
+          "description": "Read the main README",
+          "target": "README.md"
+        }
+      ],
+      "colorMode": "fileTypes"
+    }
+  ],
+  "metadata": {
+    "author": "File City Tours",
+    "createdAt": "2026-02-04T16:08:49.293Z",
+    "tags": [
+      "onboarding",
+      "superpowers",
+      "coding-agents",
+      "development-workflow"
+    ]
+  }
+}
