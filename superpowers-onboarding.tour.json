@@ -1,8 +1,8 @@
 {
   "id": "superpowers-onboarding",
   "title": "Superpowers Plugin Tour",
-  "description": "Explore the Superpowers development workflow and skills library for coding agents",
-  "version": "1.0.0",
+  "description": "Explore the Superpowers development workflow system — composable skills that give coding agents best-practice superpowers across Claude Code, OpenCode, Codex, Cursor, and Gemini CLI",
+  "version": "2.0.0",
   "audience": "New Developers",
   "prerequisites": [
     "Basic understanding of coding agents and plugin systems"
@@ -11,123 +11,201 @@
     {
       "id": "step-1-overview",
       "title": "Welcome to Superpowers",
-      "description": "Superpowers is a complete software development workflow for coding agents, built on composable skills that trigger automatically to guide development processes.",
+      "description": "Superpowers is a complete software development workflow system for coding agents. It's built on composable skills — reusable technique libraries that trigger automatically to guide TDD, planning, debugging, brainstorming, code review, and more. Skills are the building blocks; agents check for applicable skills before every action.",
       "estimatedTime": 60,
+      "focusDirectory": "",
       "colorMode": "fileTypes"
     },
     {
       "id": "step-2-skills-library",
-      "title": "Skills Library",
-      "description": "The heart of Superpowers - reusable skills that implement best practices for development workflows.",
+      "title": "The Skills Library",
+      "description": "The heart of Superpowers — 14 composable skills organized into process, execution, quality, and workspace categories. Each skill lives in its own directory with a SKILL.md reference and optional supporting docs like subagent prompts and technique references.",
       "estimatedTime": 120,
       "focusDirectory": "skills",
       "highlightLayers": [
         {
-          "id": "core-skills",
-          "name": "Core Skills",
+          "id": "process-skills",
+          "name": "Process & Planning",
           "color": "#3b82f6",
           "items": [
-            {
-              "path": "skills/brainstorming/SKILL.md",
-              "type": "file"
-            },
-            {
-              "path": "skills/writing-plans/SKILL.md",
-              "type": "file"
-            },
-            {
-              "path": "skills/subagent-driven-development/SKILL.md",
-              "type": "file"
-            }
+            { "path": "skills/using-superpowers", "type": "directory" },
+            { "path": "skills/brainstorming", "type": "directory" },
+            { "path": "skills/writing-plans", "type": "directory" },
+            { "path": "skills/writing-skills", "type": "directory" }
           ],
           "opacity": 0.7,
-          "borderWidth": 2
+          "renderStrategy": "border"
         },
         {
-          "id": "development-skills",
-          "name": "Development Skills",
+          "id": "execution-skills",
+          "name": "Execution & Development",
           "color": "#10b981",
           "items": [
-            {
-              "path": "skills/test-driven-development/SKILL.md",
-              "type": "file"
-            },
-            {
-              "path": "skills/systematic-debugging/SKILL.md",
-              "type": "file"
-            },
-            {
-              "path": "skills/verification-before-completion/SKILL.md",
-              "type": "file"
-            }
+            { "path": "skills/test-driven-development", "type": "directory" },
+            { "path": "skills/subagent-driven-development", "type": "directory" },
+            { "path": "skills/executing-plans", "type": "directory" },
+            { "path": "skills/dispatching-parallel-agents", "type": "directory" }
           ],
           "opacity": 0.7,
-          "borderWidth": 2
+          "renderStrategy": "border"
+        },
+        {
+          "id": "quality-skills",
+          "name": "Quality & Review",
+          "color": "#f59e0b",
+          "items": [
+            { "path": "skills/systematic-debugging", "type": "directory" },
+            { "path": "skills/verification-before-completion", "type": "directory" },
+            { "path": "skills/requesting-code-review", "type": "directory" },
+            { "path": "skills/receiving-code-review", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        },
+        {
+          "id": "workspace-skills",
+          "name": "Workspace & Git",
+          "color": "#8b5cf6",
+          "items": [
+            { "path": "skills/using-git-worktrees", "type": "directory" },
+            { "path": "skills/finishing-a-development-branch", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
         }
       ],
       "colorMode": "fileTypes",
       "interactiveActions": [
         {
           "type": "explore",
-          "description": "Explore the skills directory structure"
+          "description": "Explore the skills directory — each folder is a self-contained skill"
         }
       ]
     },
     {
-      "id": "step-3-platform-integration",
-      "title": "Platform Integration",
-      "description": "See how Superpowers integrates with different coding platforms through platform-specific configurations.",
+      "id": "step-3-brainstorming",
+      "title": "Brainstorming & Visual Companion",
+      "description": "The brainstorming skill uses a Socratic design process to refine ideas into specs. It includes a zero-dependency visual companion server with WebSocket support for real-time collaboration, plus automated spec review loops.",
       "estimatedTime": 90,
+      "focusDirectory": "skills/brainstorming",
       "highlightLayers": [
         {
-          "id": "platform-config",
-          "name": "Platform Support",
-          "color": "#f59e0b",
+          "id": "brainstorm-core",
+          "name": "Core Skill",
+          "color": "#3b82f6",
           "items": [
-            {
-              "path": ".claude-plugin",
-              "type": "directory"
-            },
-            {
-              "path": ".opencode",
-              "type": "directory"
-            },
-            {
-              "path": ".codex",
-              "type": "directory"
-            }
+            { "path": "skills/brainstorming/SKILL.md", "type": "file" }
           ],
           "opacity": 0.7,
-          "borderWidth": 2
+          "renderStrategy": "fill"
         },
         {
-          "id": "docs",
-          "name": "Documentation",
-          "color": "#8b5cf6",
+          "id": "brainstorm-server",
+          "name": "Visual Companion Server",
+          "color": "#10b981",
           "items": [
-            {
-              "path": "docs/README.claude-code.md",
-              "type": "file"
-            },
-            {
-              "path": "docs/README.opencode.md",
-              "type": "file"
-            },
-            {
-              "path": "docs/README.codex.md",
-              "type": "file"
-            }
+            { "path": "skills/brainstorming/scripts", "type": "directory" },
+            { "path": "skills/brainstorming/visual-companion.md", "type": "file" }
           ],
           "opacity": 0.7,
-          "borderWidth": 2
+          "renderStrategy": "border"
+        },
+        {
+          "id": "brainstorm-review",
+          "name": "Spec Review",
+          "color": "#f59e0b",
+          "items": [
+            { "path": "skills/brainstorming/spec-document-reviewer-prompt.md", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "fill"
         }
       ],
-      "colorMode": "fileTypes"
+      "colorMode": "fileTypes",
+      "interactiveActions": [
+        {
+          "type": "click-file",
+          "description": "Read the brainstorming skill to see the Socratic design flow",
+          "target": "skills/brainstorming/SKILL.md"
+        }
+      ]
     },
     {
-      "id": "step-4-testing",
+      "id": "step-4-platform-integration",
+      "title": "Multi-Platform Integration",
+      "description": "Superpowers works across 5 coding agent platforms: Claude Code, Cursor, OpenCode, Codex, and Gemini CLI. Each has a platform-specific adapter that loads skills through hooks, plugins, or extensions — same skills, different delivery mechanisms.",
+      "estimatedTime": 90,
+      "focusDirectory": "",
+      "highlightLayers": [
+        {
+          "id": "platform-adapters",
+          "name": "Platform Adapters",
+          "color": "#f59e0b",
+          "items": [
+            { "path": ".claude-plugin", "type": "directory" },
+            { "path": ".cursor-plugin", "type": "directory" },
+            { "path": ".opencode", "type": "directory" },
+            { "path": ".codex", "type": "directory" },
+            { "path": "gemini-extension.json", "type": "file" },
+            { "path": "GEMINI.md", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        },
+        {
+          "id": "hooks-system",
+          "name": "Hook System",
+          "color": "#ef4444",
+          "items": [
+            { "path": "hooks", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ],
+      "colorMode": "fileTypes",
+      "interactiveActions": [
+        {
+          "type": "hover-directory",
+          "description": "Hover over each platform directory to see its adapter files",
+          "target": ".claude-plugin"
+        }
+      ]
+    },
+    {
+      "id": "step-5-hooks",
+      "title": "Session Hooks",
+      "description": "The hooks directory contains the session initialization scripts that inject skills into each platform at startup. The session-start script reads using-superpowers and delivers it as the foundation skill, with platform detection for Claude Code vs Cursor.",
+      "estimatedTime": 60,
+      "focusDirectory": "hooks",
+      "highlightLayers": [
+        {
+          "id": "hook-files",
+          "name": "Hook Configuration",
+          "color": "#ef4444",
+          "items": [
+            { "path": "hooks/session-start", "type": "file" },
+            { "path": "hooks/hooks.json", "type": "file" },
+            { "path": "hooks/hooks-cursor.json", "type": "file" },
+            { "path": "hooks/run-hook.cmd", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "fill"
+        }
+      ],
+      "colorMode": "fileTypes",
+      "interactiveActions": [
+        {
+          "type": "click-file",
+          "description": "Read the session-start script to see how skills are injected",
+          "target": "hooks/session-start"
+        }
+      ]
+    },
+    {
+      "id": "step-6-testing",
       "title": "Test Suite",
-      "description": "Comprehensive test coverage ensures the skills work correctly across different platforms and scenarios.",
+      "description": "Comprehensive tests verify that skills load correctly, trigger on the right prompts, and produce expected behavior across platforms. Test categories include skill-triggering, explicit-skill-requests, brainstorm-server lifecycle, and subagent-driven-development integration tests.",
       "estimatedTime": 90,
       "focusDirectory": "tests",
       "highlightLayers": [
@@ -136,72 +214,104 @@
           "name": "Test Categories",
           "color": "#ef4444",
           "items": [
-            {
-              "path": "tests/opencode",
-              "type": "directory"
-            },
-            {
-              "path": "tests/claude-code",
-              "type": "directory"
-            },
-            {
-              "path": "tests/explicit-skill-requests",
-              "type": "directory"
-            }
+            { "path": "tests/claude-code", "type": "directory" },
+            { "path": "tests/opencode", "type": "directory" },
+            { "path": "tests/brainstorm-server", "type": "directory" },
+            { "path": "tests/explicit-skill-requests", "type": "directory" },
+            { "path": "tests/skill-triggering", "type": "directory" },
+            { "path": "tests/subagent-driven-dev", "type": "directory" }
           ],
           "opacity": 0.7,
-          "borderWidth": 2
+          "renderStrategy": "border"
+        }
+      ],
+      "colorMode": "fileTypes",
+      "interactiveActions": [
+        {
+          "type": "explore",
+          "description": "Explore the test categories to see how skills are validated"
+        }
+      ]
+    },
+    {
+      "id": "step-7-docs",
+      "title": "Documentation & Plans",
+      "description": "The docs directory contains platform-specific guides, architecture plans, and design specs. Plans document the thinking behind major features like visual brainstorming, the document review system, and the zero-dependency brainstorm server.",
+      "estimatedTime": 60,
+      "focusDirectory": "docs",
+      "highlightLayers": [
+        {
+          "id": "platform-docs",
+          "name": "Platform Guides",
+          "color": "#8b5cf6",
+          "items": [
+            { "path": "docs/README.opencode.md", "type": "file" },
+            { "path": "docs/README.codex.md", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "fill"
+        },
+        {
+          "id": "plans-specs",
+          "name": "Plans & Specs",
+          "color": "#3b82f6",
+          "items": [
+            { "path": "docs/plans", "type": "directory" },
+            { "path": "docs/superpowers", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
         }
       ],
       "colorMode": "fileTypes",
       "interactiveActions": [
         {
           "type": "click-file",
-          "description": "Click to view test scripts",
-          "target": "tests/opencode/run-tests.sh"
+          "description": "Read the OpenCode integration guide",
+          "target": "docs/README.opencode.md"
         }
       ]
     },
     {
-      "id": "step-5-commands",
-      "title": "Command Interface",
-      "description": "Slash commands provide direct access to key Superpowers workflows.",
+      "id": "step-8-full-picture",
+      "title": "The Full Picture",
+      "description": "You've seen the complete Superpowers architecture: 14 composable skills powering 5 coding agent platforms, with hooks for injection, comprehensive tests, and detailed documentation. Check the README for installation instructions or dive into individual skills to start using superpowers in your workflow.",
       "estimatedTime": 60,
-      "focusDirectory": "commands",
-      "highlightFiles": [
-        "commands/brainstorm.md",
-        "commands/write-plan.md",
-        "commands/execute-plan.md"
+      "focusDirectory": "",
+      "highlightLayers": [
+        {
+          "id": "entry-points",
+          "name": "Start Here",
+          "color": "#10b981",
+          "items": [
+            { "path": "README.md", "type": "file" },
+            { "path": "skills/using-superpowers/SKILL.md", "type": "file" },
+            { "path": "CHANGELOG.md", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "fill"
+        }
       ],
-      "colorMode": "fileTypes"
-    },
-    {
-      "id": "step-6-next-steps",
-      "title": "Getting Started",
-      "description": "Ready to use Superpowers? Check the README for installation instructions or explore individual skills to understand specific workflows.",
-      "estimatedTime": 60,
-      "highlightFiles": [
-        "README.md",
-        "docs/testing.md"
-      ],
+      "colorMode": "fileTypes",
       "interactiveActions": [
         {
           "type": "click-file",
-          "description": "Read the main README",
+          "description": "Read the README to get started",
           "target": "README.md"
         }
-      ],
-      "colorMode": "fileTypes"
+      ]
     }
   ],
   "metadata": {
     "author": "File City Tours",
     "createdAt": "2026-02-04T16:08:49.293Z",
+    "updatedAt": "2026-03-17T00:00:00.000Z",
     "tags": [
       "onboarding",
       "superpowers",
       "coding-agents",
-      "development-workflow"
+      "development-workflow",
+      "skills"
     ]
   }
 }
