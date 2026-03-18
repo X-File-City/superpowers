@@ -84,7 +84,7 @@
     },
     {
       "id": "step-3-brainstorming",
-      "title": "Brainstorming & Visual Companion",
+      "title": "Brainstorming and Visual Companion",
       "description": "The brainstorming skill uses a Socratic design process to refine ideas into specs. It includes a zero-dependency visual companion server with WebSocket support for real-time collaboration, plus automated spec review loops.",
       "estimatedTime": 90,
       "focusDirectory": "skills/brainstorming",
