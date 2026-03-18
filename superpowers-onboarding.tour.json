@@ -19,7 +19,7 @@
     {
       "id": "step-2-skills-library",
       "title": "The Skills Library",
-      "description": "The heart of Superpowers: 14 composable skills organized into process, execution, quality, and workspace categories. Each skill lives in its own directory with a SKILL.md reference and optional supporting docs like subagent prompts and technique references.",
+      "description": "The heart of Superpowers is its 14 composable skills organized into process, execution, quality, and workspace categories. Each skill lives in its own directory with a SKILL.md reference and optional supporting docs like subagent prompts and technique references.",
       "estimatedTime": 120,
       "focusDirectory": "skills",
       "highlightLayers": [
